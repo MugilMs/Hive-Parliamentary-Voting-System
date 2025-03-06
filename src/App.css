@@ -1,0 +1,211 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+}
+
+.App-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(198, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.App-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-menu button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-menu button:hover:not(:disabled) {
+  background-color: white;
+  color: var(--primary-color);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.nav-menu button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-menu button.active {
+  background-color: white;
+  color: var(--primary-color);
+  border-color: white;
+  font-weight: 600;
+}
+
+.transfer-nav-button {
+  background: linear-gradient(45deg, var(--primary-light), var(--secondary-color)) !important;
+  border: none !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.transfer-nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-light));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.transfer-nav-button:hover::before {
+  opacity: 1;
+}
+
+.transfer-nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.transfer-nav-button .button-icon {
+  font-size: 1.2em;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--background-light);
+  position: relative;
+  z-index: 5;
+}
+
+.auth-section {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.user-info span {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+  background: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  background: var(--background-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 20px 15px;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu button {
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 20px 15px;
+  }
+
+  .auth-section {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
+/* Animation for content transitions */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+} 
