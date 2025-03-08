@@ -1658,4 +1658,225 @@ body {
   .revenue-stat-item {
     min-width: 100%;
   }
+}
+
+/* Enterprise Services Styles */
+.enterprise-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+
+.service-tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-speed) ease;
+}
+
+.service-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform var(--transition-speed) ease;
+}
+
+.service-tab:hover {
+  color: var(--primary-color);
+}
+
+.service-tab.active {
+  color: var(--primary-color);
+}
+
+.service-tab.active::after {
+  transform: scaleX(1);
+}
+
+.service-category {
+  animation: fadeIn 0.5s ease;
+}
+
+.service-category h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.service-category .service-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  padding: 25px;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.service-card-header {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.service-card-header h4 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+}
+
+.service-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: block;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.service-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.service-features li {
+  padding: 8px 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.service-features li::before {
+  content: '✓';
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.service-button {
+  margin-top: auto;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.service-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.contact-form-section {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  margin-top: 40px;
+  scroll-margin-top: 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+.contact-form-section h3 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-form .form-group:nth-child(4) {
+  grid-column: span 2;
+}
+
+.contact-form .form-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.cancel-button {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.cancel-button:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form .form-group:nth-child(4),
+  .contact-form .form-actions {
+    grid-column: span 1;
+  }
+  
+  .service-tab {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 } 

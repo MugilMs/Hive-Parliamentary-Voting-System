@@ -3,6 +3,7 @@ import TrendingPosts from './TrendingPosts';
 import CreatePost from './CreatePost';
 import SearchProposals from './SearchProposals';
 import Marketplace from './Marketplace';
+import EnterpriseServices from './EnterpriseServices';
 
 const Home = ({ username, onLogout, onTransfer }) => {
   const [activeView, setActiveView] = useState('explore');
@@ -15,6 +16,8 @@ const Home = ({ username, onLogout, onTransfer }) => {
         return <SearchProposals username={username} />;
       case 'marketplace':
         return <Marketplace username={username} />;
+      case 'enterprise':
+        return <EnterpriseServices username={username} />;
       case 'explore':
       default:
         return <TrendingPosts username={username} />;
@@ -64,6 +67,13 @@ const Home = ({ username, onLogout, onTransfer }) => {
         >
           <span className="tab-icon">🛒</span>
           <span className="tab-text">Marketplace</span>
+        </button>
+        <button 
+          className={`nav-tab ${activeView === 'enterprise' ? 'active' : ''}`}
+          onClick={() => setActiveView('enterprise')}
+        >
+          <span className="tab-icon">💼</span>
+          <span className="tab-text">Enterprise</span>
         </button>
         <button 
           className={`nav-tab ${activeView === 'create' ? 'active' : ''}`}
