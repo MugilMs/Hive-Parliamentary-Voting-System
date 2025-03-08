@@ -1,35 +1,54 @@
-# Hive Social Explorer
+# Parliamentary Voting System
 
-A modern, vibrant React application for exploring and interacting with the Hive blockchain. Built with a sleek red and white design, this application allows users to browse trending posts, create content, and engage with the Hive community.
+A decentralized parliamentary voting application built on the Hive blockchain. This system enables transparent, secure, and immutable voting for legislative proposals.
 
-![Hive Social Explorer](https://i.imgur.com/your-screenshot.png)
+![Parliamentary Voting System](https://img.freepik.com/free-vector/gradient-blockchain-concept_23-2149153783.jpg?size=626&ext=jpg)
 
-## 🚀 Features
+## Features
 
-- **Modern UI Design**: Sleek red and white color scheme with smooth animations and transitions
-- **Secure Authentication**: Login with Hive Keychain for secure blockchain interactions
-- **Trending Posts**: Browse the latest trending content from the Hive blockchain
-- **Content Creation**: Create and publish posts with Markdown support
-- **Interactive Elements**: Vote on posts, follow users, and engage with content
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Real-time Updates**: Instant feedback for all blockchain interactions
+### Secure Blockchain Voting
+- Transparent voting recorded on Hive blockchain
+- Immutable records of all votes and proposals
+- Cryptographic verification via Hive Keychain
 
-## 🛠️ Technologies Used
+### Legislative Proposal Management
+- Create and submit parliamentary proposals
+- Structured proposal templates
+- Categorization with relevant tags
+- Markdown support for rich formatting
 
-- React 18
-- Hive Keychain
-- @hiveio/hive-js
-- React Markdown
-- Modern CSS with CSS Variables
-- Responsive Design
-- Custom Animations
+### Search Functionality
+- Search proposals by keyword, author, or content
+- Filter by legislative categories
+- View proposal snippets and statistics
 
-## 📦 Installation
+### Monetization Marketplace
+- Premium services for proposal drafting and analysis
+- Legal compliance reviews and consulting
+- Sponsored placements and marketing campaigns
+- Revenue tracking dashboard
+- Platform fee business model (10-25%)
+
+## Technology Stack
+
+- **Frontend**: React.js
+- **Blockchain**: Hive
+- **Authentication**: Hive Keychain
+- **Styling**: CSS3 with custom animations
+
+## Installation
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Hive Keychain browser extension
+
+### Setup Instructions
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hive-social-explorer.git
-cd hive-social-explorer
+git clone https://github.com/yourusername/parliamentary-voting-system.git
+cd parliamentary-voting-system
 ```
 
 2. Install dependencies:
@@ -42,117 +61,78 @@ npm install
 npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-## 🔧 Prerequisites
+## Usage Guide
 
-- Node.js (v14 or higher)
-- npm or yarn
-- [Hive Keychain Browser Extension](https://chrome.google.com/webstore/detail/hive-keychain/jcacnejopjdphbnjgfaaobbfafkihpep)
-- A Hive account
+### Authentication
+1. Install the [Hive Keychain browser extension](https://chrome.google.com/webstore/detail/hive-keychain/jcacnejopjdphbnjgfaaobbfafkihpep)
+2. Create a Hive account if you don't have one
+3. Log in using your Hive username through Keychain
 
-## 💻 Usage
+### Creating a Proposal
+1. Navigate to "Submit Proposal" tab
+2. Use the template button or create your own content
+3. Add relevant tags (governance, legislation, etc.)
+4. Submit to the blockchain for verification
 
-1. **Login**:
-   - Install the Hive Keychain browser extension
-   - Click "Login with Keychain"
-   - Enter your Hive username
-   - Approve the login request in Keychain
+### Voting on Proposals
+1. Browse "Active Proposals" to see all current proposals
+2. Click "Cast Vote" to support a proposal
+3. Confirm your vote through Hive Keychain
 
-2. **Browse Posts**:
-   - View trending posts on the home page
-   - Click on posts to read full content
-   - Use the vote button to support content creators
+### Using the Marketplace
+1. Browse available services by category
+2. Purchase premium services using HIVE currency
+3. Services include professional drafting, analysis, and marketing
 
-3. **Create Content**:
-   - Click "Create Post" in the navigation
-   - Fill in the title, content, and tags
-   - Use Markdown formatting for rich content
-   - Preview your post before publishing
-   - Click "Publish" to broadcast to the blockchain
+## Revenue Model
 
-4. **Interact**:
-   - Vote on posts
-   - Follow other users
-   - Engage with the community
+This application generates revenue through:
 
-## 🎨 Customization
+1. **Platform Fees**: 10-25% commission on all marketplace transactions
+2. **Premium Services**: Direct service fees for professional assistance
+3. **Sponsored Content**: Featured proposal placements
+4. **Verification Badges**: Premium user status indicators
 
-The application uses CSS variables for easy theme customization. Main colors can be modified in `src/index.css`:
+## Error Handling
 
-```css
-:root {
-  --primary-color: #C60000;
-  --primary-dark: #990000;
-  --primary-light: #FF1A1A;
-  --secondary-color: #FF4D4D;
-  /* ... other variables */
-}
-```
+The application includes advanced error handling:
 
-## 🔐 Security
+- Toast notifications for user feedback
+- Error animation with visual cues
+- Automatic timeout detection for blockchain operations
+- Content sanitization for security
 
-- All blockchain interactions are handled through Hive Keychain
-- No private keys are stored in the application
-- Secure authentication flow
-- Input validation and sanitization
+## Advanced Features
 
-## 🤝 Contributing
+### Delegation
+Users can delegate voting power to other members using the Delegate function
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+### Search Optimization
+Advanced search with snippet generation and relevance highlighting
 
-## 📝 License
+### Responsive Design
+Fully responsive interface that works on mobile, tablet, and desktop
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Troubleshooting
 
-## 🙏 Acknowledgments
+### Common Issues
 
-- Hive blockchain community
-- Hive Keychain developers
-- React development team
-- All contributors and users
+**Submission Timeout**: If proposal submission times out:
+- Check your internet connection
+- Ensure Hive Keychain is unlocked
+- Try using shorter content/fewer tags
 
+**Hive Keychain Not Detected**:
+- Install the browser extension
+- Restart your browser
+- Make sure the extension is enabled
 
-## 🐛 Troubleshooting
+## License
 
-**Common Issues**:
+This project is licensed under the MIT License - see the LICENSE file for details
 
-1. **Keychain Not Detected**:
-   - Ensure Hive Keychain is installed
-   - Refresh the page
-   - Check if Keychain is enabled
+## Contact
 
-2. **Transaction Failed**:
-   - Verify you have sufficient resources (RC)
-   - Check your account permissions
-   - Try again after a few minutes
-
-3. **Content Not Loading**:
-   - Check your internet connection
-   - Clear browser cache
-   - Try a different Hive API node
-
-## 🔄 Updates
-
-Stay updated with the latest changes:
-
-```bash
-git pull origin main
-npm install
-```
-
-## 📊 Performance
-
-The application is optimized for:
-- Fast loading times
-- Smooth animations
-- Efficient blockchain interactions
-- Responsive user interface
-
----
-
-Built with ❤️ for the Hive community 
+For support or inquiries, please contact: your-email@example.com 

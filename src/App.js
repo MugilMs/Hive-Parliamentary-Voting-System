@@ -16,11 +16,11 @@ function App() {
   const handleTransfer = async (amount, memo, currency) => {
     return new Promise((resolve, reject) => {
       if (!username) {
-        reject(new Error('Please login first'));
+        reject(new Error('Please authenticate first'));
         return;
       }
 
-      const recipient = window.prompt('Enter recipient username:');
+      const recipient = window.prompt('Enter recipient member ID:');
       if (!recipient) {
         reject(new Error('Recipient is required'));
         return;
@@ -34,10 +34,10 @@ function App() {
         currency,
         (response) => {
           if (response.success) {
-            alert(`Successfully sent ${amount} ${currency} to @${recipient}`);
+            alert(`Successfully delegated ${amount} ${currency} to @${recipient}`);
             resolve(response);
           } else {
-            reject(new Error(response.message || 'Transfer failed'));
+            reject(new Error(response.message || 'Delegation failed'));
           }
         }
       );
