@@ -1,4 +1,4 @@
-# Parliamentary Voting System
+# TransparenSee Voting
 
 A decentralized parliamentary voting application built on the Hive blockchain. This system enables transparent, secure, and immutable voting for legislative proposals.
 
